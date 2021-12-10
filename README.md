@@ -13,7 +13,7 @@ In order to use this project, you **must** be familiar with the following aspect
 - HTML
 - CSS
 
-## Not required, but Nice to have knowledge:
+### Not required, but Nice to have knowledge:
 - NodeJS
 - Git or any other version control management system
 - Basic programming skills: Functions, Loops
@@ -39,18 +39,23 @@ Follow the below instructions to deploy this repository to a Marketing Cloud Acc
 
 ## The Folder Structure
 
-### /function-library/library.ssjs
-File that contains all the functions that are used in the Custom Preference Center. This file must be loaded on top of **every page** of the Custom Preference Center.
+**/function-library/library.ssjs**: File that contains all the functions that are used in the Custom Preference Center. This file must be loaded on top of **every page** of the Custom Preference Center.
 
 > Failure to Load this file will result in the Custom Preference Center not working, and will result in a 500 error.
 
-## /cloud-pages/
-Folder that contains all the pages of the Custom Preference Center, including HTML and CSS files.
+**/cloud-pages/**: Folder that contains all the pages of the Custom Preference Center, including HTML and CSS files.
 
-## /data-extensions/
-Folder that contains all the Data Extensions that are used in the Custom Preference Center. Use Deployment Manager to deploy these Data Extensions or create them by hand with the required fields and naming conventions.
+**/data-extensions/**: Folder that contains all the Data Extensions that are used in the Custom Preference Center. Use Deployment Manager to deploy these Data Extensions or create them by hand with the required fields and naming conventions.
 
-## Deploying to a Marketing Cloud Business unit
+## Deployment instructions
+
+We will follow the below steps to deploy the Custom Preference Center to a new account:
+
+1. Transfer the library.ssjs file to a new HTML Content Block:
+a. Open the library.ssjs file in a text editor
+b. Copy the contents of the file into a new HTML Content Block in Content Builder and give it the following name: `code library` and the following external key: `CT_CUSTOM_PREFERENCE_CENTER_LIBRARY`.
+
+> It is important to use the above external key EXATCLY as it is. Failure to do so will result in the Custom Preference Center not working.
 
 
 
